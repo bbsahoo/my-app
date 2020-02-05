@@ -1,11 +1,6 @@
 pipeline {
-    
+	agent any
     stages {
-        stage('---checkout---') {
-            steps {
-                git "https://github.com/dkshahi/my-app.git"
-            }
-        }
         stage('---clean---') {
             steps {
                 sh "mvn clean"
